@@ -45,5 +45,6 @@ group :development, :test do
   gem 'devise'
   gem 'foundation-rails'
   gem 'simple_form'
-  gem "slim-rails"
+  gem 'slim-rails'
+  gem 'mailman', require: false
 end
