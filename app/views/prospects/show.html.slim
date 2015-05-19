@@ -1,0 +1,17 @@
+p#notice = notice
+
+h3
+  ' Prospect:
+  = @prospect.name
+h3 = @prospect.email
+h3 = @prospect.department.name
+
+- @prospect.emails.each do |email|
+  p = email.subject
+  p = email.body
+
+br
+
+= link_to 'Edit', edit_prospect_path(@prospect)
+'|
+= link_to 'Back', prospects_path
