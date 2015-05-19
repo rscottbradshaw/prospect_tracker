@@ -1,0 +1,13 @@
+app_name: prospecttracker
+
+# Rails App Configs
+be_app_repo: git@github.com:rscottbradshaw/prospect_tracker.git
+be_app_env: production
+be_app_branch: master
+
+# HTML/JS App Configs
+# Uncomment if you want to deploy a JS/HTML App
+# fe_app_local_path: /path/to/built/js/app/
+
+dev_key_files:
+  - dev_keys/scott.pub

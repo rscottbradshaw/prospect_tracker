@@ -47,4 +47,5 @@ group :development, :test do
   gem 'simple_form'
   gem 'slim-rails'
   gem 'mailman', require: false
+  gem 'taperole'
 end
