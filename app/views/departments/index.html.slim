@@ -1,19 +1,4 @@
-H1 All current Prospects for whomever
+H1 All Prospects for #{current_user.department.name}
+td = link_to 'Smashing Boxes Prospects', prospects_path
 
-table
-  thead
-    tr
-      th Name
-      th Email
-      th Status
-      th Department
-
-  tbody
-    tr
-    - @prospects.each do |prospect|
-      tr
-      = simple_form_for prospect do |f|
-        td = prospect.name
-        td = prospect.email
-        td = prospect.status
-        td = prospect.department.name
+= render 'shared/dashboard'

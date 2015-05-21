@@ -1,0 +1,21 @@
+table
+  thead
+    tr
+      th Name
+      th Email
+      th Status
+      th Department
+
+  tbody
+    tr
+    - @prospects.each do |prospect|
+      tr
+      = simple_form_for prospect do |f|
+        td = prospect.name
+        td = prospect.email
+        td = prospect.status
+        td = f.association :department, prompt: "Select a Department", label: false
+        td = f.button :submit
+        td = link_to 'Show', prospect
+        td = link_to 'Edit', edit_prospect_path(prospect)
+        td = link_to 'Destroy', prospect, data: {:confirm => 'Are you sure?'}, :method => :delete
