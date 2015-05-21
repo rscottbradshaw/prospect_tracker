@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :departments
+
   resources :prospects, except: [:new, :create]
 
   get 'home/index'

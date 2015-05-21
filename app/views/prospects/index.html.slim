@@ -17,6 +17,7 @@ table
         td = prospect.status
         td = f.association :department, prompt: "Select a Department", label: false
         td = f.button :submit
+        td = link_to 'Department Prospects', departments_path
         td = link_to 'Show', prospect
         td = link_to 'Edit', edit_prospect_path(prospect)
         td = link_to 'Destroy', prospect, data: {:confirm => 'Are you sure?'}, :method => :delete

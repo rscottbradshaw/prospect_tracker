@@ -1,0 +1,19 @@
+H1 All current Prospects for whomever
+
+table
+  thead
+    tr
+      th Name
+      th Email
+      th Status
+      th Department
+
+  tbody
+    tr
+    - @prospects.each do |prospect|
+      tr
+      = simple_form_for prospect do |f|
+        td = prospect.name
+        td = prospect.email
+        td = prospect.status
+        td = prospect.department.name
