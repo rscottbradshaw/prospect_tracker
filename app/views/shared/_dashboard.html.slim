@@ -13,7 +13,7 @@ table
       = simple_form_for prospect do |f|
         td = prospect.name
         td = prospect.email
-        td = prospect.status
+        td = f.association :status, prompt: "Current Status", label: false
         td = f.association :department, prompt: "Select a Department", label: false
         td = f.button :submit
         td = link_to 'Show', prospect

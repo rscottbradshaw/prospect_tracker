@@ -1,4 +1,9 @@
-H1 All Prospects for #{current_user.department.name}
-td = link_to 'Smashing Boxes Prospects', prospects_path
+H1 All Departments for Smashing Boxes
 
-= render 'shared/dashboard'
+- @departments.each do |department|
+  br
+  = link_to department.name, department
+
+
+br
+= link_to 'Return to All Prospects', prospects_path
