@@ -15,3 +15,11 @@
  *= require foundation_and_overrides
 
  */
+
+body {
+  background-image: url("weave.png");
+}
+
+.menu .menu-item:hover .menu-link {
+  color: #eb1767;
+}

@@ -18,19 +18,17 @@
     <li class="name">
       <h1><a href="/prospects">Prospect Tracker</a></h1>
     </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
 
   <section class="top-bar-section">
     <!-- Right Nav Section -->
-    <ul class="right">
+    <ul class="right menu">
       <% if current_user %>
-        <li><%= link_to current_user.department.name, department_path(current_user.department) %></li>
-        <li><%= link_to 'All Departments', departments_path %></li>
-        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <li class="menu-item"><%= link_to current_user.department.name, department_path(current_user.department), class: 'menu-link' %></li>
+        <li class="menu-item"><%= link_to 'All Departments', departments_path, class: 'menu-link' %></li>
+        <li class="menu-item"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'menu-link' %></li>
       <% else %>
-        <li><%= link_to 'Login', new_user_session_path %> </li>
+        <li class="menu-item"><%= link_to 'Login', new_user_session_path, class: 'menu-link' %> </li>
       <% end %>
     </ul>
   </section>
