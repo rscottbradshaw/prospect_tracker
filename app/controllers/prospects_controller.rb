@@ -49,6 +49,6 @@ class ProspectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prospect_params
-      params[:prospect].permit(:department_id, :status_id)
+      params[:prospect].permit(:department_id, :status_id, :notes)
     end
 end

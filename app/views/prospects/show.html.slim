@@ -1,17 +1,34 @@
 p#notice = notice
 
-h3
-  ' Prospect:
-  = @prospect.name
-h3 = @prospect.email
-h3 = @prospect.department.name
-
-- @prospect.emails.each do |email|
-  p = email.subject
-  p = email.body
-
-br
-
-= link_to 'Edit', edit_prospect_path(@prospect)
-'|
 = link_to 'Back', prospects_path
+
+div class="small-3 columns"
+  = simple_form_for @prospect do |f|
+    = f.association :status, prompt: "Current Status", label: false
+    = f.association :department, prompt: "Select a Department", label: false
+    = f.input :notes, label: 'Notes for Prospect:'
+    = f.button :submit, 'Update Note'
+
+div class="small-8 columns"
+
+  h3
+    ' Prospect:
+    = @prospect.name
+  h4
+    ' Email:
+    = @prospect.email
+  h4
+    ' Department:
+    = @prospect.department.name
+
+  - @prospect.emails.each do |email|
+    div class="panel"
+      p
+        ' SUBJECT
+        br
+        = email.subject
+      p
+        ' EMAIL
+        br
+        = email.body
+  br
