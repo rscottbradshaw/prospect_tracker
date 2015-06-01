@@ -23,3 +23,13 @@ body {
 .menu .menu-item:hover .menu-link {
   color: #eb1767;
 }
+
+.title-area .name img {
+  margin: 4px 5px 0 15px;
+  float: left;
+  /*clear: both;*/
+}
+
+.title-area .name h1 {
+  margin-left: 55px;
+}

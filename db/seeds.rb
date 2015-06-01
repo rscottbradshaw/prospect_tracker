@@ -11,11 +11,11 @@ departments = Department.create([{ name: 'Growth', manager: 'Luke Kuechly' },
   { name: 'Marketing', manager: 'Thomas Davis' },
   { name: 'UX', manager: 'Jonathan Stewart' },
   { name: 'UI', manager: 'Kelvin Benjamin' },
-  { name: 'Project Managment', manager: 'Roman Harper' }])
+  { name: 'Project Mgmt', manager: 'Roman Harper' }])
 
 statuses = Status.create([{ name: 'Reviewed'},
   { name: 'Phone Screen'},
-  { name: 'Invited for Interview'},
+  { name: 'Interview Invite'},
   { name: 'Interviewed'},
   { name: 'Declined'},
   { name: 'Hired' }])
