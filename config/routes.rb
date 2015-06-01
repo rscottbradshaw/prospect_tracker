@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :departments
 
+  resources :statuses
+
   resources :prospects, except: [:new, :create]
 
   get 'prospects/index'
