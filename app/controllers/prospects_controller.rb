@@ -5,7 +5,7 @@ class ProspectsController < ApplicationController
   # GET /prospects
   # GET /prospects.json
   def index
-    @prospects = Prospect.all
+    @prospects = Prospect.active
   end
 
   # GET /prospects/1
@@ -15,6 +15,10 @@ class ProspectsController < ApplicationController
 
   # GET /prospects/1/edit
   def edit
+  end
+
+  def archive
+    @prospects = Prospect.archive
   end
 
   # PATCH/PUT /prospects/1

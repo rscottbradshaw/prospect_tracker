@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   resources :statuses
 
-  resources :prospects, except: [:new, :create]
+  resources :prospects, except: [:new, :create] do
+    get "archive", on: :collection
+  end
+
 
   get 'prospects/index'
 
