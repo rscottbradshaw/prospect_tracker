@@ -1,6 +1,19 @@
 div class="small-6 small-centered columns"
-  H1 All Departments for Smashing Boxes
+  H1 All Departments
 
-  - @departments.each do |department|
-    br
-    = link_to department.name, department
+  table
+    thead
+      tr
+        th Departments
+        th Manager
+
+    tbody
+      - @departments.each do |department|
+        tr
+          td = link_to department.name, department
+          td = department.manager
+          td = link_to 'Destroy', department, data: {:confirm => 'Are you sure?'}, :method => :delete
+    = simple_form_for @department do |f|
+      td = f.input :name, label: 'New Department Name:'
+      td = f.input :manager, label: 'Department Manager:'
+      td = f.button :submit, 'Add Department'
