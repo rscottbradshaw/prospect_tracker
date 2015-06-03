@@ -24,6 +24,10 @@ body {
   color: #eb1767;
 }
 
+.menu .has-dropdown:hover a:hover {
+  color: #eb1767;
+}
+
 .title-area .name img {
   margin: 4px 5px 0 15px;
   float: left;
