@@ -2,12 +2,13 @@
 require "rubygems"
 require "bundler/setup"
 require "mailman"
+require File.expand_path('../../config/environment', __FILE__)
 
 # Mailman.config.logger = Logger.new("log/mailman.log")
 
 Mailman.config.pop3 = {
-  username: "sbcareertest@gmail.com",
-  password: "careers1",
+  username: Rails.configuration.x.email_polling.username,
+  password: Rails.configuration.x.email_polling.password,
   server: 'pop.gmail.com',
   port: 995,
   ssl: true

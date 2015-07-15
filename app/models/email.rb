@@ -9,7 +9,8 @@ class Email < ActiveRecord::Base
 
   def attach_to_prospect
     prospect = Prospect.find_or_create_by(email: address)
-    prospect.update(name: name)
+    new_status = Status.find_by_name("New")
+    prospect.update(name: name, status: new_status)
     self.prospect = prospect
     self.save
   end

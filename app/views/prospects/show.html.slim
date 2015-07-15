@@ -19,7 +19,7 @@ div class="small-8 columns"
     = @prospect.email
   h4
     ' Department:
-    = @prospect.department.name
+    = @prospect.department.try(:name)
 
   - @prospect.emails.each do |email|
     div class="panel"

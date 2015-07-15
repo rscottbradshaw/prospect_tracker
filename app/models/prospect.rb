@@ -8,7 +8,7 @@ class Prospect < ActiveRecord::Base
   end
 
   def self.active
-    Prospect.includes(:status).except(statuses: { name: ["Declined", "Hired"]} )
+    Prospect.includes(:status).where.not(statuses: { name: ["Declined", "Hired"]} )
   end
 
 end
