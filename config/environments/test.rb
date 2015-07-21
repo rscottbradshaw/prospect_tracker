@@ -41,5 +41,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.x.email_polling.username = 'sbcareertest@gmail.com'
-  config.x.email_polling.password = 'emailtest'
+  config.x.email_polling.password = 'ptracker'
 end

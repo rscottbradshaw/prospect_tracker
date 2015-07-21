@@ -78,5 +78,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.x.email_polling.username = 'sbcareertest@gmail.com'
-  config.x.email_polling.password = 'emailtest'
+  config.x.email_polling.password = 'ptr@cker'
 end
