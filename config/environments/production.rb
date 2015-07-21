@@ -77,6 +77,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.x.email_polling.username = 'something'
-  config.x.email_polling.password = 'oranother'
+  config.x.email_polling.username = 'sbcareertest@gmail.com'
+  config.x.email_polling.password = 'emailtest'
 end

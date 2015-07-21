@@ -14,7 +14,7 @@ table
         td = prospect.name
         td = prospect.email
         td = f.association :status, prompt: "Current Status", label: false
-        td = f.association :department, prompt: "Select a Department", label: false
+        td = f.association :department, prompt: "Select Department", label: false
         td = f.button :submit
         td = link_to 'Show', prospect
         td = link_to 'Edit', edit_prospect_path(prospect)

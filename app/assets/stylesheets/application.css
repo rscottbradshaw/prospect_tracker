@@ -20,13 +20,13 @@ body {
   background-image: url("weave.png");
 }
 
-.menu .menu-item:hover .menu-link {
+/*.menu .menu-item:hover .menu-link {
   color: #eb1767;
-}
+}*/
 
-.menu .has-dropdown:hover a:hover {
+/*.menu .has-dropdown:hover a:hover {
   color: #eb1767;
-}
+}*/
 
 .title-area .name img {
   margin: 4px 5px 0 15px;
